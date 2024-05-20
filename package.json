@@ -1,0 +1,60 @@
+{
+  "name": "veact",
+  "version": "0.1.4",
+  "description": "Mutable state enhancer library for React by @vue/reactivity",
+  "keywords": [
+    "React mutable state lib",
+    "React vue state",
+    "React composition API",
+    "React state library"
+  ],
+  "license": "MIT",
+  "author": "Surmon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veactjs/veact.git"
+  },
+  "files": [
+    "CHANGELOG.md",
+    "dist",
+    "src"
+  ],
+  "sideEffects": false,
+  "main": "dist/veact.umd.js",
+  "module": "dist/veact.esm.js",
+  "browser": "dist/veact.umd.js",
+  "types": "dist/veact.esm.d.ts",
+  "scripts": {
+    "lint": "eslint --ext .ts src/**",
+    "format": "prettier --write --parser typescript \"src/**/*.ts\"",
+    "test": "jest",
+    "build": "libundler",
+    "rebirth": "npm run lint && npm run test && npm run build",
+    "release": ". ./scripts/release.sh"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17.0.0",
+    "react-dom": "^16.8.0  || ^17.0.0"
+  },
+  "dependencies": {
+    "@vue/reactivity": "^3.2.0"
+  },
+  "devDependencies": {
+    "@surmon-china/libundler": "^2.2.0",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.4.7",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.4"
+  }
+}
